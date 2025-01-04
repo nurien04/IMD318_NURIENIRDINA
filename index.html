@@ -1,0 +1,374 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-image: url(images/Light\ Modern\ Textile\ Minimalism\ Desktop\ Wallpaper.png);
+            color: #555;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #6b3e26;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #eacda3;
+            border: 2px solid #d4a276;
+            border-radius: 15px;
+            margin: 20px;
+            padding: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .topnav a {
+            float: left;
+            color: #6b3e26;
+            text-align: center;
+            padding: 14px 16px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .topnav a:hover {
+            background-color: #d4a276;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px auto;
+            color: white;
+            background-color: #6b3e26;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #d4a276;
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content img {
+            margin: 10px;
+            height: 200px;
+            width: 200px; 
+            border-radius: 50%;
+            border: 5px solid #eacda3;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .content img:hover {
+            transform: scale(1.1);
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #d4a276;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #d4a276;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .quote {
+            font-style: italic;
+            margin: 30px 0;
+            font-size: 1.2em;
+            color: #555;
+            background: #f3e2f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .favorite-section {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fffaf3;
+            border: 2px solid #eacda3;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .favorite-section h1 {
+            margin-bottom: 15px;
+            color: #6b3e26;
+        }
+
+        .favorite-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .favorite-item {
+            text-align: center;
+        }
+
+        .favorite-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid #eacda3;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .favorite-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .favorite-item p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #6b3e26;
+        }
+
+        .highlight {
+            color: #FF69B4;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            font-size: 0.9em;
+            background-color: #6A5ACD;
+            color: white;
+        }
+        .clock-container {
+        float: right;
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #6A5ACD;
+        border: 2px solid #D4A276;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 100px;
+    }
+
+        .images-map {
+            text-align: center;
+            border: 5px solid #eacda3;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: #fffaf3;
+            box-shadow: 0 4px 8px #eacda3;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 5px solid #eacda3;
+            border-radius: 10px;
+        }
+   
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="home_page.html" target="_blank">Home</a>
+        <a href="biodata.html" target="_blank">About Me</a>
+        <a href="MyFamily.html" target="_blank">My Family</a>
+        <a href="Myexperince.html" target="_blank">My Experience</a>
+        <a href="MyEducation.html" target="_blank">My Education</a>
+        <a href="Gallery.html" target="_blank">Gallery</a>
+        <a href="Moments.html" target="_blank">Moment</a>
+    </div>
+
+    <div class="clock-container" id="txt"></div>
+
+    <body onload="startTime()">
+    <script>
+    function startTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i}; 
+  return i;
+}
+</script>
+</body>
+
+<br>
+<br>
+
+    <div class="content">
+        <h1>Welcome To My Website!</h1>
+        <h2>˚˖𓍢ִ໋🌷͙֒✧˚.🎀༘⋆Nurien Irdina Binti Indra ˚˖𓍢ִ໋🌷͙֒✧˚.🎀༘⋆</h2>
+        <hr>
+
+        <div>
+            <a href="images/myself4.jpeg">
+                <img src="images/myself4.jpeg" alt="Myself">
+            </a>
+        </div>
+        <div class="quote">
+            <span class="highlight">“And whoever puts their trust in Allah, then He will suffice him.” – Quran 65:3</span>
+        </div>
+        <hr>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/_nurienn__/profilecard/?igsh=aGNzNjBidDU3eTM4"><img src="images/ig.png" alt="Instagram"></a>
+            <a href="https://x.com/Yinn2004"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="mailto:nurienindra@gmail.com"><img src="images/gmail.png" alt="Mail"></a>
+        </div>
+    </div>
+
+    <div class="favorite-section">
+        <h1>My Favorite Music</h1>
+        <div class="favorite-grid">
+            <div class="favorite-item">
+                <img src="images/rose.png" alt="Number One Girl">
+                <p>Number One Girl - Rose</p>
+                <audio controls>
+                    <source src="audio/number_one_girl_musicaldown.com_1734848168.mp3" type="audio/ogg">
+                    <source src="audio/number one girl_musicaldown.com_1734848168.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="favorite-item">
+                <a href="https://www.youtube.com/watch?v=YrtS8MESh0I"><img src="images/runtuh.jpg" alt="Runtuh"></a>
+                <p>Runtuh - Feby Putri</p>
+                <audio controls>
+                    <source src="audio/Runtuh_musicaldown.com_1734852493.mp3" type="audio/ogg">
+                    <source src="audio/Runtuh_musicaldown.com_1734852493.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element. 
+                </audio>
+            </div>
+            <div class="favorite-item">
+                <a href="https://www.youtube.com/watch?v=4Lmcadu8ghM"><img src="images/keshi.jpg" alt="Keshi"></a>
+                <p>Soft Spot - Keshi</p>
+                <audio controls>
+                    <source src="audio/Soft Spot sped up version_musicaldown.com_1734852691.mp3" type="audio/ogg">
+                    <source src="audio/Soft Spot sped up version_musicaldown.com_1734852691.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="favorite-item">
+                <a href="https://www.youtube.com/watch?v=o0oW3lPoOXM"><img src="images/babymoster.webp" alt="Babymoster"></a>
+                <p>Click Clack - Babymoster</p>
+                <audio controls>
+                    <source src="audio/CLIK CLAK_musicaldown.com_1734852746.mp3" type="audio/ogg">
+                    <source src="audio/CLIK CLAK_musicaldown.com_1734852746.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <div class="images-map">
+        <h2>📍🗺️ Interactive Map ✈</h2>
+        <p style="text-align: center; font-size: 18px; color: #555; font-family: 'Verdana', sans-serif;">
+            To find out more about the topic, click on the state of 
+            <span style="color: #007BFF; font-weight: bold;">Selangor</span>, 
+            <span style="color: #FF5722; font-weight: bold;">Sabah</span>, or 
+            <span style="color: #f0b1e1; font-weight: bold;">Negeri Sembilan</span>.
+        </p>
+       
+        
+        <img src="images/malaysia_map.jpg" usemap="#image-map" alt="Malaysia Map">
+
+        <map name="image-map">
+            <area target="_blank" alt="UiTM N.Sembilan" title="UiTM N.Sembilan" href="https://nsembilan.uitm.edu.my/rembau/" coords="183,287,180,278,179,268,200,250,204,252,209,259,214,260,218,263,221,266,223,270,221,277,221,282,221,289,210,287,189,290" shape="poly">
+            <area target="_blank" alt="Kg Delek" title="Kg Delek" href="https://n45selatklang.blogspot.com/2017/02/sejarah-kampung-delek.html" coords="146,235,152,234,158,234,168,231,173,240,168,250,157,251,147,245" shape="poly">
+            <area target="_blank" alt="The Place I Want to Go" title="The Place I Want to Go" href="https://sabahtourism.com/" coords="578,102,584,92,597,81,604,74,614,48,623,53,632,47,638,73,685,104,684,117,664,138,625,135,606,135,595,135,585,132,574,132,572,114,573,111" shape="poly">
+        </map>
+        <p><span class="highlight"> If you want to know about me please click:</span>  <a href="biodata.html" target="_blank" class="button">More</a></p>
+    </div>
+
+    <div style="text-align: center; font-family: Arial, sans-serif; margin: 20px;">
+        <a href="biodata.html" target="_blank" accesskey="2" style="margin: 10px; padding: 10px 20px; text-decoration: none; color: white; background-color: #4CAF50; border-radius: 5px; font-size: 16px; display: inline-block;">📄 Biodata (Alt 2)</a>
+        <a href="MyFamily.html" target="_blank" accesskey="3" style="margin: 10px; padding: 10px 20px; text-decoration: none; color: white; background-color: #FF5722; border-radius: 5px; font-size: 16px; display: inline-block;">👨‍👩‍👧‍👦 My Family (Alt 3)</a>
+        <a href="MyEducation.html" target="_blank" accesskey="4" style="margin: 10px; padding: 10px 20px; text-decoration: none; color: white; background-color: #FFC107; border-radius: 5px; font-size: 16px; display: inline-block;">🎓 My Education (Alt 4)</a>
+        <a href="Myexperince.html" target="_blank" accesskey="5" style="margin: 10px; padding: 10px 20px; text-decoration: none; color: white; background-color: #2196F3; border-radius: 5px; font-size: 16px; display: inline-block;">💼 My Experience (Alt 5)</a>
+        <a href="Gallery.html" target="_blank" accesskey="6" style="margin: 10px; padding: 10px 20px; text-decoration: none; color: white; background-color: #9C27B0; border-radius: 5px; font-size: 16px; display: inline-block;">🖼️ Gallery (Alt 6)</a>
+        <a href="Moments.html" target="_blank" accesskey="7" style="margin: 10px; padding: 10px 20px; text-decoration: none; color: white; background-color: #E91E63; border-radius: 5px; font-size: 16px; display: inline-block;">📸 Moments (Alt 7)</a>
+    </div>
+    
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="#top" style="text-decoration: none; font-size: 18px; font-weight: bold; color: #007BFF;">Back to TOP</a>
+    </div>
+    
+      </div>
+        <footer>
+            &copy; 2024 Nurien Irdina - All Rights Reserved
+            <p id="datetime"></p>
+
+            <script>
+              var now = new Date();
+              var datetime = now.toLocaleString();
+            
+              document.getElementById("datetime").innerHTML = datetime;
+            </script>
+        </footer>
+          
+</body>
+</html>

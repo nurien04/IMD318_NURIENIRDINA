@@ -1,0 +1,225 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moments</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url(images/star.gif);
+            color: #333;
+        }
+
+        header {
+            background:  #ed96ffd7;
+            background-size: 200% 200%;
+            color: #5f3782;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 0.5em;
+            color: #ffffff;
+            font-style: italic;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 3em auto;
+            padding: 0 1em;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #4e54c8;
+            transform: translateX(-50%);
+        }
+
+        .moment {
+            position: relative;
+            margin: 2em 0;
+            width: 50%;
+            padding: 1.5em;
+            border-radius: 8px;
+            background: rgb(209, 223, 244);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .moment.left {
+            left: 0;
+            transform: translateX(-20%);
+        }
+
+        .moment.right {
+            left: 50%;
+            transform: translateX(20%);
+        }
+
+        .moment::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: #4e54c8;
+            border-radius: 50%;
+            border: 2px solid rgb(5, 75, 167);
+            box-shadow: 0 0 0 4px rgba(78, 84, 200, 0.3);
+        }
+
+        .moment.left::after {
+            right: -20px;
+        }
+
+        .moment.right::after {
+            left: -20px;
+        }
+
+        .moment h2 {
+            margin: 0 0 0.5em;
+            font-size: 1.4em;
+            color: #4e54c8;
+        }
+
+        .moment p {
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .moment ul {
+            padding-left: 20px;
+        }
+
+        .moment video {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 1em;
+            border: 8px solid #fefefe; 
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            font-size: 0.9em;
+            background-color: #6A5ACD;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🫧💗✨An unforgettable moment🫧💗✨</h1>
+        <p>"Life becomes more meaningful when you realize the simple fact that you’ll never get the same moment twice."</p>
+    </header>
+
+    <div class="timeline">
+        <div class="moment left">
+            <h2>🏖️ A memorable moment at Pangkor Island</h2>
+            <p>
+                <ul>
+                    <li>Despite the bad weather, we drove a motorbike around Pangkor Island, and it was the most enjoyable experience.</li>
+                </ul>
+            </p>
+            <video controls height="450">
+                <source src="video/VID-20241017-WA0001.mp4" type="video/mp4">
+                <source src="video/VID-20241017-WA0001.ogg" type="video/ogg">
+                <source src="video/VID-20241017-WA0001.webp" type="video/webp">
+                Your browser does not support the video element.
+            </video>
+        </div>
+        <div class="moment right">
+            <h2>🏊🏻 Trip to the Bangi Wonderland with friends</h2>
+            <p>
+                <ul>
+                    <li>My friend and I went to Bangi Wonderland, it was fun. I will never forget this moment.</li>
+                </ul>
+            </p>
+            <video controls height="450">
+                <source src="video/bangi wonderland.mp4" type="video/mp4">
+                <source src="video/bangi wonderland.mp4" type="video/ogg">
+                <source src="video/bangi wonderland.mp4" type="video/webp">
+                Your browser does not support the video element.
+            </video>
+        </div>
+        <div class="moment left">
+            <h2>🍓A trip to Port Dickson with my friends</h2>
+            <p>
+                <ul>
+                    <li>My classmate and I are currently enjoying our first PD session together.</li>
+                </ul>
+            </p>
+            <video controls height="450">
+                <source src="video/document_6298759192454894529.mp4" type="video/mp4">
+                <source src="video/document_6298759192454894529.ogg" type="video/ogg">
+                <source src="video/document_6298759192454894529.webp" type="video/webp">
+                Your browser does not support the video element.
+            </video>
+        </div>
+        <div class="moment right">
+            <h2>🐢 A trip to Terengganu with my family</h2>
+            <p>
+                <ul>
+                    <li>This was the most memorable moment on my first trip to Terengganu, and I will never forget it.</li>
+                </ul>
+            </p>
+            <video controls height="450">
+                <source src="video/document_6298759192454894533.mp4" type="video/mp4">
+                <source src="video/document_6298759192454894533.ogg" type="video/ogg">
+                <source src="video/document_6298759192454894533.webp" type="video/webp">
+                Your browser does not support the video element.
+            </video>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="Index.html" target="_blank" class="button">
+          <img src="images/new button.png" alt="Home Button">
+        </a>
+    </div>
+
+    <div style="text-align:center; margin-top: 20px;">
+        <a href="#top" style="text-decoration: none; font-size: 18px; font-weight: bold; color: #007BFF;">➤ Back to TOP</a>
+    </div>
+
+    <div>
+        <a href="index.html" target="_blank" accesskey="s" 
+        style="text-decoration: none; font-size: 18px; font-weight: bold; color: white; background-color: #5dade2; padding: 12px 24px; border-radius: 8px; display: inline-block; text-align: center; transition: background-color 0.3s, transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        🏠 Go to Home Page (Alt + S)
+     </a> 
+    </div>
+
+    <footer>
+        &copy; 2024 Nurien Irdina - All Rights Reserved
+        <p id="datetime"></p>
+
+        <script>
+          var now = new Date();
+          var datetime = now.toLocaleString();
+        
+          document.getElementById("datetime").innerHTML = datetime;
+        </script>
+    </footer>
+</body>
+</html>
+
+
+
+
+

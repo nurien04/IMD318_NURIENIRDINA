@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url(images/borboletas-butterflies.gif);
+            margin: 0;
+            padding: 0;
+            
+        }
+
+
+        header {
+            background:  #ed96ffd7;
+            background-size: 200% 200%;
+            color: #5f3782;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: white;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px; 
+            object-fit: cover; 
+            display: block;
+            border-bottom: 5px solid #6c5ce7;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .caption {
+            opacity: 1;
+        }
+
+        .section {
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #6c5ce7;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #6c5ce7;
+            color: white;
+            font-size: 1rem;
+            margin-top: 20px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+    </style>
+</head>
+<body>
+
+   <header>
+    <h1>✨ Gallery ✨</h1>
+   </header>
+
+    <div class="section">
+        <h2 class="section-title">Moments With Friends</h2>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="images/bff.3.jpg"><img src="images/bff.3.jpg" alt="My BFF">
+            <div class="caption">My BFF</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/myfriends.6.jpg"><img src="images/myfriends.6.jpg" alt="outing with friends">
+            <div class="caption">Outing with friends</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/myfriends uitm.jpg"><img src="images/myfriends uitm.jpg" alt="UiTM friends">
+            <div class="caption">UiTM friends</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/housemate.jpeg"><img src="images/housemate.jpeg" alt="housemate">
+            <div class="caption">Housemate</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/uitm friends.jpg"><img src="images/uitm friends.jpg" alt="UiTM friends">
+            <div class="caption">UiTM friends</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/smktg 2.png"><img src="images/smktg 2.png" alt="school friends">
+            <div class="caption">School friends</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/smktg.jpg"><img src="images/smktg.jpg" alt="school friends">
+            <div class="caption">School friends</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/ex housemate.jpg"><img src="images/ex housemate.jpg" alt="ex housemates">
+            <div class="caption">Ex haousemates</div></a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Moments With Family</h2>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item">
+           <a href="images/family.15.jpg"> <img src="images/family.15.jpg" alt="cousin engaged">
+            <div class="caption">Cousin engaged</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/family.9.jpg"><img src="images/family.9.jpg" alt="Hari Raya">
+            <div class="caption"> Hari Raya</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/family.20.jpg"><img src="images/family.20.jpg" alt="with cousin">
+            <div class="caption"> With cousin</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/family.10.jpg"><img src="images/family.10.jpg" alt="zoo melaka">
+            <div class="caption"> Zoo melaka</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/family.5.jpg"><img src="images/family.5.jpg" alt="Masjid kristal">
+            <div class="caption"> Masjid kristal</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/family.23.jpg"><img src="images/family.23.jpg" alt="morib beach">
+            <div class="caption">Morib beach</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/family.21.jpg"><img src="images/family.21.jpg" alt="holiday in pd">
+            <div class="caption">Holiday in pd</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/family.8.jpg"><img src="images/family.8.jpg" alt="cousin engaged">
+            <div class="caption">Cousin engaged</div></a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Childhood Memories</h2>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="images/waktukecik.9.JPG"><img src="images/waktukecik.9.JPG" alt="aunt's house">
+            <div class="caption">Aunt's house</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/waktukecik.8.jpeg"><img src="images/waktukecik.8.jpeg" alt="with mybrother">
+            <div class="caption">With mybrother</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/waktukecik.5.jpg"><img src="images/waktukecik.5.jpg" alt="With mybrother">
+            <div class="caption">With mybrother</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/waktukecik.4.jpg"><img src="images/waktukecik.4.jpg" alt="picture with mycousin">
+            <div class="caption">Picture with mycousin</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/waktukecik.3.jpg"><img src="images/waktukecik.3.jpg" alt="in old house">
+            <div class="caption">In old house</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/waktukecik.2.jpg"><img src="images/waktukecik.2.jpg" alt="mysiblings">
+            <div class="caption">Mysiblings</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/waktukecik.11.jpg"><img src="images/waktukecik.11.jpg" alt="in mygrandparents house">
+            <div class="caption">In mygrandparents house</div></a>
+        </div>
+        <div class="gallery-item">
+            <a href="images/waktukecik.13.jpg"><img src="images/waktukecik.13.jpg" alt="this is ME">
+            <div class="caption"> Me</div></a>
+        </div>
+
+
+    </div>
+
+    <div style="text-align: center;">
+        <a href="Index.html" target="_blank" class="button">
+          <img src="images/new button.png" alt="button home">
+        </a>
+  </div>
+
+
+    <div style="text-align:left; margin-top: 20px;">
+        <a href="#top" style="text-decoration: none; font-size: 18px; font-weight: bold; color: #007BFF;">➤ Back to TOP</a>
+    </div>
+
+    <br>
+    
+    <a href="index.html" target="_blank" accesskey="c" 
+    style="text-decoration: none; font-size: 18px; font-weight: bold; color: white; background-color: #84ccd5; padding: 10px 20px; border-radius: 5px; display: inline-block; text-align: center; transition: background-color 0.3s, transform 0.3s; ">
+     🏠 Go to Home Page (Alt + C)
+ </a>
+ 
+
+    <footer>
+        &copy; 2024 Your Name. All rights reserved. 
+        <p id="datetime"></p>
+
+        <script>
+          var now = new Date();
+          var datetime = now.toLocaleString();
+        
+          document.getElementById("datetime").innerHTML = datetime;
+        </script>
+    </footer>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
